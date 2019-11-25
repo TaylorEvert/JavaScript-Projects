@@ -1,0 +1,30 @@
+html {
+    box-sizing: border-box;
+}
+
+.Form1 {
+    border: black solid;
+    padding: 12px 20px;
+    margin: 30px 30px;
+    width: 30%;
+    background-color: blueviolet;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input {
+    border: black solid;
+    width: 100%;
+    border-radius: 5px;
+    height: 30px;
+}
+
+#Submit {
+    width: 30%;
+    height: 50px;
+}
+
+p {
+    margin: 2px;
+    font-weight: bold;
+}
