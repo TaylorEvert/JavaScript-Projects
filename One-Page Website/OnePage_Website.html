@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>The Texas Longhorns</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="CSS/One_Page_Website.css">
+		<script src="JS/OnePage_Website.js"></script>
+	</head>
+
+<body>
+	
+	<!-- NAV START -->
+	<div align="center">
+		<a href="#home" id="link">HOME</a>
+		<a href="#about">ABOUT</a>
+		<a href="#contact">CONTACT</a>
+	</div>
+	<!-- NAV END -->
+	
+	<!-- HOME START -->
+		<div id="home"; align="center">
+		
+			<h1>HOME</h1>
+			<p> The Texas, Longhorns are based out of Austin, Texas. The Texas Longhorns are a NCAA football team. They are in the big 12 confrence. After a rough few seasons,<br>
+			The Longhorns are now on their way a bright future. This is partially due to the new coach as well as the new quarterback. The Longhorns are currently<br>
+			in the middle of a season that looks particuarly outstanding. They are not only 1st in the big 12, but look very promising as a team to defeat their rivals, <br>
+			The Oklahoma Sooners. 
+			
+		</div>
+	<!-- HOME END -->
+	
+	<!-- ABOUT START -->
+		<div id="about">
+			<h1>ABOUT</h1>
+			<h3>Click on a picture for a modal view!</h3>
+
+				<div id="row">
+
+					<div id="column">
+						<img src="Longhorn_1.png" alt="Longhorn Picture 1" onclick="openModal();currentSlide(1)">
+					</div>
+					<div id="column">
+						<img src="Longhorn_2.png" alt="Longhorn Picture 2" onclick="openModal();currentSlide(2)"><br>
+					</div>
+					<div id="column">
+						<img src="Longhorn_3.png" alt="Longhorn Picture 3" onclick="openModal();currentSlide(3)">
+					</div>
+					<div id="column">
+						<img src="Longhorn_4.png" alt="Longhorn Picture 4" onclick="openModal();currentSlide(4)"><br>
+					</div>
+
+				</div>
+		</div>
+
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+
+				<div class="mySlides">
+					<div class="numbertext"> 1 / 4</div>
+					<img src="Longhorn_1.png">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext"> 2 / 4</div>
+					<img src="Longhorn_2.png">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext"> 3 / 4</div>
+					<img src="Longhorn_3.png">
+				</div>
+				
+				<div class="mySlides">
+					<div class="numbertext"> 4 / 4</div>
+					<img src="Longhorn_4.png">
+				</div>
+
+				<!-- Previous/Next Controls -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<!-- Caption -->
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+
+				<!-- Thumbnail Controls -->
+				<div class="column">
+					<img class="demo" src="Longhorn_1.png" onclick="currentSlide(1)">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="Longhorn_2.png" onclick="currentSlide(2)">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="Longhorn_3.png" onclick="currentSlide(3)">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="Longhorn_4.png" onclick="currentSlide(4)">
+				</div>
+
+			</div>
+		</div>
+
+
+	<!--ABOUT END -->	
+	
+	<!-- CONTACT START -->
+		<div id="contact"; align="center">
+			<h1>CONTACT</h1>
+			<em>Please enter contact information for more information on The Texas Longhorns!</em><br>
+			<form action="" method="get">
+				First Name: <input type="text" name="First_Name"><br>
+				Last Name: <input type="text" name="Last_Name"><br>
+				Email: <input type="text" name="Email"><br>
+				Password: <input type="text" name="Password"><br>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+	<!-- CONTACT END -->
+	
+</body>
+
+<footer>
+	<details>
+		<summary>Extra Longhorn Information</summary>
+		<p>This webpage was created as an assignment to demonstrate a one-page webpage without using CSS</p>
+	</details>
+<footer>
+</html>
+	
