@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    
+        $(document).ready(function() {
+            $("html").append(
+            "<body>\
+                <div id='container'>\
+                    <div id='inner'>\
+                        <h1>Basic jQuery</h1>\
+                        <p id='1'>Paragraph 1</p>\
+                        <p id='2'>Paragraph 2</p>\
+                        <p id='3'>Paragraph 3</p>\
+                    </div>\
+                </div>\
+            </body>"
+            );
+            // allows h1 to be hidden then shown again, but only once
+            $("#2").css({"color": "red"});
+            $("#3").one("click", function() {
+                $('h1').hide();
+            });
+            $("#1").one("click", function() {
+                $('h1').show();
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+
+
+
+</body>
+</html>
