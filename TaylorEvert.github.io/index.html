@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+	<head>
+		<meta charset="UTF-8">
+		<title>Taylor Evert - Portfolio</title>
+		  <link rel="stylesheet" type="text/css" href="CSS/index_CSS.css">
+		  <script src="JS/index_JS.js"></script>
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>></script> 
+		  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+	</head>
+
+<!-- Body -->
+<body class="Background"> 
+<!-- Fade in effect -->
+<script> // This script and function controls our fade in effect 
+  document.body.className += ' fade-out';
+    $(function() {
+      $('body').removeClass('fade-out');
+    }
+  );
+
+</script>
+
+<!-- Navbar -->
+	<div class="Navbar">
+		<a class="active" href="#Home">Home</a> 
+		<a href="#Slideshow">Slideshow</a> 
+		<a href="#About">About</a>
+		<a href="#GitHub">GitHub</a>
+		<a onclick="openForm()">Contact</a> 
+	</div>
+
+<!-- This allows us to close the form when we click outside the nav bar or contact form -->
+<div class="btn cancel" onclick="closeForm()">
+
+<!-- Home -->
+	<div id="Home">
+		<br> 
+		<br>
+		
+<!-- Video -->
+		<video autoplay muted loop id="Typing_Video"> 
+			<source src="Videos/Typing-1920x1080.vid" type="video/mp4">
+			Your browser does not support HTML5 video. 
+		</video>
+	</div>
+
+<!-- Video text --> 
+	<div class="Video_Text"> 
+		<h1 style="color:white;">Taylor Evert - Portfolio</h1>
+			<p> 
+			  <strong>
+					<center>
+                        "Imagination is more important than knowledge.
+                    For knowledge is limited, whereas imagination embraces the entire world,
+                    stimulating progress, giving birth to evolution."<br>
+                    - Albert Einstein
+					</center>	
+			  </strong>				
+			</p> 
+	</div>
+
+<!-- Slideshow section -->
+  <div id="Slideshow">
+    <div id="Slideshow_Background"> 
+      <div id="Slideshow_Container">
+        
+		<div class="mySlides fade">
+          <div class="Slide_Number">1 / 6</div>
+            <img class="Slide_Show_Images" src="Images/Texas_Black.jpg" style="width:100%">
+              <div class="text">I'am located out of Austin, Texas</div>
+        </div>
+        
+		<div class="mySlides fade">
+          <div class="Slide_Number">2 / 6</div>
+            <img class="Slide_Show_Images" src="Images/HTML_CSS_and_JavaScript.jpeg" style="width:100%">
+              <div class="text">Where I'am training to be certified in:<br>HTML, CSS, JavaScript,</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="Slide_Number">3 / 6</div>
+            <img class="Slide_Show_Images" src="Images/Python.png" style="width:100%">
+              <div class="text">the popular programming language Python,</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="Slide_Number">4 / 6</div>
+            <img class="Slide_Show_Images" src="Images/C_Sharp_and_Dot_NET.png" style="width:100%">
+              <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+        </div>
+
+		<div class="mySlides fade">
+	      <div class="Slide_Number">5 / 6</div>
+			<img class="Slide_Show_Images" src="Images/SQL_and_Database.jpg" style="width:100%">
+              <div class="text">back end development, databases and SQL.</div>
+			</div>
+
+		<div class="mySlides fade">
+		  <div class="Slide_Number">6 / 6</div>
+			<img class="Slide_Show_Images" src="Images/Coding_1.jpg" style="width:100%">
+			  <div class="text"> 
+				<a onclick="openForm()" href="#Contact" style="color:white;">Please feel free to contact me through my form!</a>
+			  </div>
+	    </div>
+	
+		  <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+		
+	  </div>
+  <br>
+
+      <div style="text-align:center">
+ 
+		<span class="dot" onclick="currentSlide(1)"></span> 
+		<span class="dot" onclick="currentSlide(2)"></span> 
+		<span class="dot" onclick="currentSlide(3)"></span> 
+		<span class="dot" onclick="currentSlide(4)"></span> 
+		<span class="dot" onclick="currentSlide(5)"></span> 
+		<span class="dot" onclick="currentSlide(6)"></span> 
+
+      </div>
+    </div>
+  </div>
+
+<!-- Required slideshow function -->
+  <script>
+    var slideIndex = 1;
+	  showSlides(slideIndex);
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1}    
+		if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		  slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	}
+  </script>
+
+<!-- About section -->
+  <div class="Row" id="About"> 
+	<div class="Column_2"> <!-- Left column -->
+	  <img src="Images/Development.jpg" alt="Laptop">
+	</div>
+  
+	<div class="Column_1"> <!-- Right column -->
+	  <h1><u> About </u></h1>
+	    <p>I am a young software developer from Austin, Texas.<br><br>I am a currently working to graduate from <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, where I am training to be certified in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. <br><br>I am a hard working developer and would love to work with you! Please feel free to <a href="#Contact">contact</a> me below!</p>
+	</div>
+  </div>
+
+<!-- GitHub section -->
+	<div class="Row" id="GitHub">
+		<div class="Column_1"> <!-- Left column -->
+			<h1><u> GitHub </u></h1>
+			<p>Throughout all of my different courses, I will be posting my work on my GitHub profile.<br>
+			My GitHub is a showcase for all work I complete. There will be a wide variety of assignments posted.<br>
+			All of which will be related to software development, or computers in general.</p>
+			
+				<p>You can view all of my current work here:<br>
+				<center><a href="https://github.com/TaylorEvert/JavaScript-Projects" target="_blank">The Tech Academy GitHub</a></center></p>
+		</div>
+		
+		<div class="Column_2"> <!-- Right column -->
+			<a href="https://github.com/TaylorEvert/JavaScript-Projects" target="_blank"><img src="Images/GitHub.png" alt="GitHub"></a>
+		</div>
+	</div>
+</div>
+
+<!-- Contact section -->
+  <div id="Contact"> 
+    <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
+	  <div class="form-popup" id="myForm">
+	    <form action="https://formspree.io/mgevnbvo" method="POST" class="form-container" target="_blank"> 
+		<h1><u> Contact </u></h1>
+			<label for="name"><b>Name</b></label>
+			  <input type="text" placeholder="Type your name here" name="name" required>
+			<label for="phone"><b>Phone</b></label>
+			  <input type="text" placeholder="Enter your phone number here" name="phone">
+			<label for="email"><b>Email</b></label>		
+			  <input type="text" placeholder="Type your email address here" name="email" required>
+			<label for="message"><b>Message</b></label>
+			  <input type="text" placeholder="Type your message here" name="message">
+ 
+    <button type="submit" class="btn">SUBMIT</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+	    </form>
+	  </div>
+  </div>
+	
+<!-- Footer section -->	
+	<footer>
+	  <p>
+	    <center>Current graduate of,  &copy; <a href="https://learncodinganywhere.com/">The Tech Academy</a></center><br>
+      </p>
+	</footer>
+
+</body>
+</html>
